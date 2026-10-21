@@ -3,73 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Política de Privacidade — Noting</title>
+<title>Política de Privacidade do Noting</title>
 <style>
   body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; }
   h1 { font-size: 1.6em; }
   h2 { font-size: 1.2em; margin-top: 1.8em; }
   .updated { color: #666; font-size: 0.9em; margin-bottom: 2em; }
   a { color: #0a5fd8; }
+  ul { padding-left: 1.3em; }
 </style>
 </head>
 <body>
 
-<h1>Política de Privacidade — Noting</h1>
-<p class="updated">Última atualização: 21 de agosto de 2026</p>
+<h1>Política de Privacidade do Noting</h1>
+<p class="updated">Última atualização: 21 de outubro de 2026</p>
 
 <p>Esta política descreve como o aplicativo <strong>Noting</strong> ("o app"), desenvolvido de forma independente,
 lida com dados quando você o utiliza.</p>
 
 <h2>Resumo</h2>
-<p>Na versão atual, o Noting não coleta, não transmite e não compartilha seus dados financeiros com
-nenhum servidor, empresa ou terceiro. Tudo o que você registra no app fica armazenado apenas no seu
-próprio aparelho. Se isso mudar no futuro — por exemplo, com a chegada de sincronização em nuvem —
-esta política será atualizada antes disso entrar no ar, explicando exatamente o que passa a ser
-enviado e como.</p>
+<p>Os dados financeiros que você registra no Noting (lançamentos, categorias, cartões, recorrências, metas e
+configurações) ficam armazenados apenas no seu próprio aparelho. O Noting não os envia para nenhum servidor,
+empresa ou terceiro.</p>
+<p>A única exceção é a assinatura do Noting Premium. Para vender a assinatura e saber se ela está ativa, o app usa
+a Google Play (que cobra o pagamento) e o RevenueCat (que gerencia o status da assinatura). Esses serviços recebem
+dados da compra e do aparelho, descritos abaixo, e nunca os seus lançamentos. Se o app passar a enviar
+mais alguma coisa no futuro, por exemplo com a chegada de sincronização em nuvem, esta política será atualizada
+antes disso entrar no ar, explicando exatamente o que passa a ser enviado e como.</p>
 
 <h2>Quais dados o app usa</h2>
-<p>Hoje, o Noting armazena localmente, no dispositivo do usuário, as informações que você mesmo insere:
-lançamentos financeiros, categorias, cartões, recorrências e configurações do app. Esses dados
-ficam salvos no armazenamento local do Android (via Capacitor Preferences) e não saem do
-aparelho automaticamente nesta versão.</p>
+<p>O Noting armazena localmente, no dispositivo, as informações que você mesmo insere: lançamentos financeiros,
+categorias, cartões, recorrências e configurações do app. Esses dados ficam salvos no armazenamento local do
+Android (via Capacitor Preferences) e não saem do aparelho automaticamente.</p>
+
+<h2>Assinatura e pagamentos</h2>
+<p>O Noting tem um plano gratuito e um plano pago, o Noting Premium, com assinatura mensal ou anual. Ao assinar:</p>
+<ul>
+  <li><strong>Google Play.</strong> O pagamento é feito e processado inteiramente pela Google Play. O Noting não
+  recebe, não vê e não armazena número de cartão, dados bancários ou outros dados de pagamento. A cobrança, a
+  renovação e o cancelamento seguem as regras da Google Play.</li>
+  <li><strong>RevenueCat.</strong> O app usa o serviço RevenueCat (RevenueCat, Inc.) para confirmar com a Google
+  Play que a assinatura está ativa e liberar os recursos do Premium, inclusive ao reinstalar o app ou trocar de
+  aparelho (função "Restaurar compra").</li>
+</ul>
+<p>Para isso, o RevenueCat recebe e processa:</p>
+<ul>
+  <li>um identificador anônimo gerado pelo próprio RevenueCat para o seu aparelho, que não contém seu nome nem seu e-mail;</li>
+  <li>informações da compra: o produto assinado, datas, valor, situação da assinatura e o código da compra
+  fornecido pela Google Play;</li>
+  <li>dados técnicos do aparelho e da conexão: modelo e versão do Android, idioma, país e endereço IP.</li>
+</ul>
+<p>O Noting não envia ao RevenueCat o seu nome, e-mail, telefone, nem qualquer lançamento, categoria, cartão ou meta.
+Esses dados são usados somente para validar a assinatura, liberar o Premium, restaurar compras, dar suporte e
+prevenir fraudes. O RevenueCat tem a sua própria política de privacidade, disponível em
+<a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>, e a Google Play tem a dela, em
+<a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
+<p>O RevenueCat e a Google podem tratar esses dados em servidores fora do Brasil, inclusive nos Estados Unidos.</p>
+<p>Você pode cancelar a assinatura a qualquer momento na Google Play, em Play Store, Pagamentos e assinaturas.
+Cancelar a assinatura não apaga os dados que estão no seu aparelho.</p>
 
 <h2>Backup e exportação</h2>
-<p>O app oferece uma função de exportação/importação de backup em formato JSON, acionada
-manualmente pelo usuário. O arquivo gerado fica sob controle exclusivo do usuário — o Noting
-não envia esse arquivo para nenhum servidor. Se você optar por compartilhar ou armazenar esse
-backup em outro serviço (por exemplo, um serviço de nuvem do seu próprio aparelho), isso é uma
-ação sua, fora do controle do app.</p>
+<p>O app oferece uma função de exportação/importação de backup em formato JSON, acionada manualmente pelo usuário.
+O arquivo gerado fica sob controle exclusivo do usuário e o Noting não o envia para nenhum servidor. Se você optar
+por compartilhar ou armazenar esse backup em outro serviço (por exemplo, um serviço de nuvem do seu próprio
+aparelho), isso é uma ação sua, fora do controle do app.</p>
 
 <h2>Autenticação biométrica</h2>
-<p>Caso você ative o bloqueio por biometria (impressão digital ou reconhecimento facial), essa
-verificação é feita inteiramente pelo sistema operacional do seu aparelho. O Noting não recebe,
-armazena nem processa dados biométricos.</p>
+<p>Caso você ative o bloqueio por biometria (impressão digital ou reconhecimento facial), essa verificação é feita
+inteiramente pelo sistema operacional do seu aparelho. O Noting não recebe, armazena nem processa dados biométricos.</p>
 
 <h2>Notificações</h2>
-<p>As notificações e lembretes do app são agendados e exibidos localmente pelo sistema Android.
-Nenhum dado é enviado a servidores externos para gerar essas notificações.</p>
+<p>As notificações e lembretes do app são agendados e exibidos localmente pelo sistema Android. Nenhum dado é
+enviado a servidores externos para gerar essas notificações.</p>
 
 <h2>Anúncios e rastreamento</h2>
-<p>O Noting não exibe anúncios, não utiliza SDKs de publicidade e não realiza rastreamento de
-comportamento do usuário para fins de marketing ou analytics de terceiros.</p>
+<p>O Noting não exibe anúncios, não utiliza SDKs de publicidade e não realiza rastreamento de comportamento do usuário
+para fins de marketing ou de análise (analytics) por terceiros. O único serviço externo integrado ao app é o
+RevenueCat, usado exclusivamente para gerenciar assinaturas, como descrito acima.</p>
 
 <h2>Compartilhamento de dados</h2>
-<p>Na versão atual, não compartilhamos, vendemos ou transferimos dados dos usuários para terceiros,
-pois o app não coleta esses dados em primeiro lugar — tudo permanece no aparelho.</p>
+<p>Não vendemos seus dados e não os compartilhamos para publicidade. Os únicos dados que saem do aparelho são os
+da assinatura, descritos na seção "Assinatura e pagamentos", e vão para a Google Play e para o RevenueCat. Seus
+dados financeiros permanecem no aparelho.</p>
 
-<h2>Exclusão de dados</h2>
-<p>Como os dados existem hoje apenas localmente, você pode apagá-los a qualquer momento
-desinstalando o aplicativo ou limpando os dados do app nas configurações do Android. Caso uma
-futura sincronização em nuvem seja adicionada, esta seção será atualizada com as opções de
-exclusão de dados também no servidor.</p>
+<h2>Seus direitos e exclusão de dados</h2>
+<p>Seus dados financeiros existem apenas no seu aparelho, e você pode apagá-los a qualquer momento desinstalando o
+aplicativo ou limpando os dados do app nas configurações do Android.</p>
+<p>Em relação aos dados da assinatura, nos termos da Lei Geral de Proteção de Dados (Lei 13.709/2018), você pode
+pedir confirmação de que tratamos seus dados, acesso a eles, correção, eliminação ou informações sobre o
+compartilhamento. Para isso, escreva para o e-mail de contato abaixo. Pediremos o mínimo necessário para
+localizar o seu registro de compra e encaminharemos o pedido ao RevenueCat quando for preciso. Alguns dados
+da compra podem ser mantidos pelo tempo exigido por obrigações legais, fiscais e contábeis.</p>
 
 <h2>Alterações nesta política</h2>
-<p>Esta política pode ser atualizada caso o funcionamento do app mude no futuro (por exemplo,
-se recursos de sincronização em nuvem forem adicionados). A data da última atualização
-sempre estará no topo desta página.</p>
+<p>Esta política pode ser atualizada caso o funcionamento do app mude (por exemplo, se recursos de sincronização em
+nuvem forem adicionados). A data da última atualização sempre estará no topo desta página.</p>
 
 <h2>Contato</h2>
-<p>Dúvidas sobre esta política ou sobre o app podem ser enviadas para:
+<p>Dúvidas sobre esta política ou sobre o app, ou pedidos relativos aos seus dados, podem ser enviados para:
 <a href="mailto:noting.suporte@gmail.com">noting.suporte@gmail.com</a></p>
 
 </body>
