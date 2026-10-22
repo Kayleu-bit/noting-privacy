@@ -23,19 +23,22 @@ lida com dados quando você o utiliza.</p>
 
 <h2>Resumo</h2>
 <p>Os dados financeiros que você registra no Noting (lançamentos, categorias, cartões, recorrências, metas e
-configurações) ficam armazenados apenas no seu próprio aparelho. O Noting não os envia para nenhum servidor,
-empresa ou terceiro.</p>
+configurações) ficam armazenados no seu próprio aparelho. O Noting não os vende nem os envia para empresas ou
+terceiros. A única exceção é o backup na nuvem, um recurso do Noting Premium que você usa com a sua conta: nesse caso
+o app guarda uma cópia desses dados em um servidor da Google (Firebase), em uma área que só a sua conta consegue
+acessar, como explicado na seção "Backup na nuvem".</p>
 <p>As exceções são a conta e a assinatura do Noting Premium. A conta é opcional, mas necessária para assinar, e é
 feita com o serviço Firebase Authentication, da Google. Para vender a assinatura e saber se ela está ativa, o app
 usa a Google Play (que cobra o pagamento) e o RevenueCat (que gerencia o status da assinatura). Esses serviços
 recebem os dados da conta, da compra e do aparelho, descritos abaixo, e nunca os seus lançamentos. Se o app passar a enviar
-mais alguma coisa no futuro, por exemplo com a chegada de sincronização em nuvem, esta política será atualizada
-antes disso entrar no ar, explicando exatamente o que passa a ser enviado e como.</p>
+mais alguma coisa no futuro, esta política será atualizada antes disso entrar no ar, explicando exatamente o que passa
+a ser enviado e como.</p>
 
 <h2>Quais dados o app usa</h2>
 <p>O Noting armazena localmente, no dispositivo, as informações que você mesmo insere: lançamentos financeiros,
 categorias, cartões, recorrências e configurações do app. Esses dados ficam salvos no armazenamento local do
-Android (via Capacitor Preferences) e não saem do aparelho automaticamente.</p>
+Android (via Capacitor Preferences). Eles só saem do aparelho se você usar o backup na nuvem, descrito abaixo, ou se
+você mesmo exportar um arquivo de backup.</p>
 
 <h2>Conta</h2>
 <p>Você pode usar o Noting sem criar conta. A conta é opcional, mas é necessária para assinar o Premium, e serve
@@ -43,13 +46,26 @@ para guardar a sua assinatura e permitir que você a use em outro aparelho. Ao c
 Authentication (Google LLC), que recebe e guarda:</p>
 <ul>
   <li>o seu e-mail;</li>
-  <li>a sua senha, guardada de forma protegida pelo próprio Firebase, sem que o Noting consiga ver o seu valor;</li>
+  <li>a sua senha, guardada de forma protegida pelo próprio Firebase, sem que o Noting consiga ver o seu valor
+  (quando você entra com o Google, não há senha no Noting);</li>
+  <li>se você entrar com a sua conta Google, o nome e o e-mail que o Google informa ao Firebase;</li>
   <li>um identificador da conta, gerado automaticamente, e datas de criação e de último acesso.</li>
 </ul>
 <p>Usamos esses dados para identificar você, permitir que você entre na conta, recuperar a senha por e-mail e ligar a
-sua assinatura à conta. O identificador da conta também é enviado ao RevenueCat, como descrito abaixo. A conta não
-guarda os seus lançamentos, que continuam só no aparelho. Os Termos de Uso estão em
+sua assinatura à conta. O identificador da conta também é enviado ao RevenueCat, como descrito abaixo. A conta, por si só, não
+guarda os seus lançamentos: eles só vão para a nuvem se você usar o backup descrito abaixo. Os Termos de Uso estão em
 <a href="termos/">kayleu-bit.github.io/noting-privacy/termos</a>.</p>
+
+<h2>Backup na nuvem</h2>
+<p>O backup na nuvem é um recurso do Noting Premium, disponível quando você está com a conta ativa. Ele guarda uma
+cópia dos seus dados do app (lançamentos, categorias, cartões, metas, regras do salário, modo motorista e veículos) no
+Cloud Firestore, serviço do Firebase (Google LLC), em uma área ligada ao identificador da sua conta. As regras de
+acesso do serviço permitem que apenas a sua conta leia e grave essa área. O app envia a cópia automaticamente, ao ser
+aberto ou ao ir para segundo plano, quando os seus dados mudaram, e você também pode enviar ou restaurar a cópia
+manualmente em Perfil, Minha conta. Se você entrar em um aparelho sem dados, o app oferece restaurar a cópia.</p>
+<p>Usamos essa cópia exclusivamente para que você recupere os seus dados ao trocar de aparelho ou reinstalar o app.
+Nós não a vendemos, não a usamos para publicidade e não a lemos no dia a dia. Os dados trafegam criptografados.
+Se você cancelar o Premium, o recurso para de enviar novas cópias. Se você excluir a conta, a cópia é apagada junto.</p>
 
 <h2>Assinatura e pagamentos</h2>
 <p>O Noting tem um plano gratuito e um plano pago, o Noting Premium, com assinatura mensal ou anual. Ao assinar:</p>
@@ -100,15 +116,17 @@ como descrito acima.</p>
 
 <h2>Compartilhamento de dados</h2>
 <p>Não vendemos seus dados e não os compartilhamos para publicidade. Os únicos dados que saem do aparelho são os
-da conta e da assinatura, descritos nas seções "Conta" e "Assinatura e pagamentos", e vão para a Google (Firebase e
-Google Play) e para o RevenueCat. Seus dados financeiros permanecem no aparelho.</p>
+da conta, da assinatura e, se você usar o backup na nuvem, a cópia dos seus dados, descritos nas seções "Conta",
+"Backup na nuvem" e "Assinatura e pagamentos". Eles vão para a Google (Firebase e Google Play) e para o RevenueCat,
+que não recebe os seus lançamentos.</p>
 
 <h2>Seus direitos e exclusão de dados</h2>
-<p>Seus dados financeiros existem apenas no seu aparelho, e você pode apagá-los a qualquer momento desinstalando o
-aplicativo ou limpando os dados do app nas configurações do Android.</p>
+<p>Seus dados financeiros existem no seu aparelho, e você pode apagá-los desse aparelho a qualquer momento
+desinstalando o aplicativo ou limpando os dados do app nas configurações do Android. Se você usou o backup na nuvem,
+a cópia continua na nuvem até você excluir a conta.</p>
 <p>Para <strong>excluir a conta</strong>, abra o app, vá em Perfil, Minha conta, Excluir minha conta. Se não tiver mais
 o app, siga as instruções em <a href="excluir-conta/">kayleu-bit.github.io/noting-privacy/excluir-conta</a>. Excluir a
-conta não cancela a assinatura, que você cancela na Google Play.</p>
+conta apaga o login e a cópia de backup na nuvem, mas não cancela a assinatura, que você cancela na Google Play.</p>
 <p>Em relação aos dados da conta e da assinatura, nos termos da Lei Geral de Proteção de Dados (Lei 13.709/2018), você pode
 pedir confirmação de que tratamos seus dados, acesso a eles, correção, eliminação ou informações sobre o
 compartilhamento. Para isso, escreva para o e-mail de contato abaixo. Pediremos o mínimo necessário para
@@ -116,8 +134,8 @@ localizar o seu registro de compra e encaminharemos o pedido ao RevenueCat quand
 da compra podem ser mantidos pelo tempo exigido por obrigações legais, fiscais e contábeis.</p>
 
 <h2>Alterações nesta política</h2>
-<p>Esta política pode ser atualizada caso o funcionamento do app mude (por exemplo, se recursos de sincronização em
-nuvem forem adicionados). A data da última atualização sempre estará no topo desta página.</p>
+<p>Esta política pode ser atualizada caso o funcionamento do app mude (por exemplo, se novos recursos que enviem dados
+forem adicionados). A data da última atualização sempre estará no topo desta página.</p>
 
 <h2>Contato</h2>
 <p>Dúvidas sobre esta política ou sobre o app, ou pedidos relativos aos seus dados, podem ser enviados para:
